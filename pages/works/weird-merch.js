@@ -1,0 +1,43 @@
+import {
+  Container,
+  Badge,
+  List,
+  ListItem,
+  Link
+} from '@chakra-ui/react'
+import { Title, WorkImage, Meta } from '../../components/work'
+import P from '../../components/paragraph'
+import Layout from '../../components/layouts/article'
+
+const Work = () => (
+  <Layout title="Weird Merch">
+    <Container>
+      <Title>
+        Weird Merch <Badge>2020</Badge>
+      </Title>
+      <P>
+        A Project, that provides an opportunity to create custom clothing, in other words, you choose a thing from the catalog or send your own.<br />
+        Then you use the editor to apply drawings and photos as you want, and complete the order.
+        Then, our creative team enters the work, which will apply a drawing on the clothes according to your layout, all the work is done
+        manually by our artists.
+      </P>
+      <List ml={4} my={4}>
+        <ListItem>
+          <Meta>Platform</Meta>
+          <span>Web</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Stack</Meta>
+          <span>NodeJs, Express, MongoDB, React, Redux-saga</span>
+        </ListItem>
+      </List>
+
+      <WorkImage src="/images/works/weird-merch_01.png" alt="wierdmerch" />
+      <WorkImage src="/images/works/weird-merch_02.png" alt="wierdmerch" />
+      <WorkImage src="/images/works/weird-merch_03.png" alt="wierdmerch" />
+    </Container>
+  </Layout>
+)
+
+export default Work
+export { getServerSideProps } from '../../components/chakra'
